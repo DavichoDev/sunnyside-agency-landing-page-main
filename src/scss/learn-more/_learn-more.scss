@@ -20,9 +20,38 @@
             h1, p, a {
                 text-align: center;
             }
+            h1 {
+                color: v.$veryDarkDesaturated;
+            }
             a {
                 text-transform: uppercase;
                 font-family: v.$fuente_principal;
+                color: v.$veryDarkDesaturated;
+                position: relative;
+                z-index: 10;
+                width: 40%;
+                &::after{
+                    content: '';
+                    z-index: -1;
+                    width: 100%;
+                    height: 0.5rem;
+                    position: absolute;
+                    left: 0;
+                    top: 70%;
+                    border-radius: 1rem;
+                    transition: 0.15s;
+                    opacity: .3;
+                }
+            }
+            .yellow-anchor {
+                &::after{
+                    background-color: v.$yellow;
+                }
+            }
+            .pink-anchor {
+                &::after{
+                    background-color: v.$softRed;
+                }
             }
         }
     }
