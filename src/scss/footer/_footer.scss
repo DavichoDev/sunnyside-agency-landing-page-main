@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    background-color: v.$darkModerate;
+    .footer-content {
+        padding: 5rem 0;
+        .logo {
+
+        }
+        .links {
+            a {
+                color: v.$darkDesaturated;
+            }
+        }
+        .socials {
+
+            .social {
+
+            }
+        }
+    }
+}
