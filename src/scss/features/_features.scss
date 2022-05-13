@@ -1,0 +1,51 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.features {
+    .features-content {
+        .feature {
+            background-repeat: no-repeat;
+            background-position: center top;
+            min-height: 60rem;
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+
+            .text {
+                padding: 3rem 2rem;
+                grid-row: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+
+                h1,
+                p {
+                    text-align: center;
+                }
+
+                h1 {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .design {
+            background-image: linear-gradient(to bottom, transparent 50%, transparent 0%), url(../img/desktop/image-graphic-design.jpg);
+
+            .text {
+                h1, p {
+                    color: v.$darkDesaturated;
+                }
+            }
+        }
+
+        .photography {
+            background-image: linear-gradient(to bottom, transparent 50%, transparent 0%), url(../img/desktop/image-photography.jpg);
+            .text {
+                h1, p {
+                    color: v.$darkBlue;
+                }
+            }
+        }
+    }
+}

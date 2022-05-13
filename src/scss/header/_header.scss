@@ -1,0 +1,47 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    background-image: url(../img/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 55rem;
+    position: relative;
+
+    .header-content {
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 3rem 2rem;
+        }
+
+        .header-copy,
+        .arrow-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+        .header-copy {
+            top: 0;
+            bottom: 30%;
+            p {
+                color: v.$white;
+                font-family: v.$fuente_principal;
+                font-size: 4rem;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 900;
+                letter-spacing: .5rem;
+                line-height: 1.2;
+            }
+        }
+        .arrow-logo {
+            bottom: 0;
+            top: 30%;
+        }
+    }
+}
