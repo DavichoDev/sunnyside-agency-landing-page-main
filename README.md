@@ -4,7 +4,7 @@
 
 ## Welcome! 👋
 
-Final result (mobile only for now): https://chic-empanada-144a02.netlify.app/
+Final result (there is missing mobile menu): https://chic-empanada-144a02.netlify.app/
 
 Thanks for checking out this front-end coding challenge.
 
