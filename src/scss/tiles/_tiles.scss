@@ -4,4 +4,7 @@
 .tiles {
     display: grid;
     @include m.grid(2, 0);
+    @include m.desktop {
+        @include m.grid(4, 0);
+    }
 }

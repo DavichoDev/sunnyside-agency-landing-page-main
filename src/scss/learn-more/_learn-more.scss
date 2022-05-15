@@ -7,9 +7,15 @@
         height: 100vh;
         background-repeat: no-repeat;
         background-position: center top;
-        background-size: 60vh;
         display: grid;
+        background-size: 60vh;
         grid-template-rows: repeat(2, 1fr);
+        @include m.tablet {
+            height: 60rem;
+            background-size: contain;
+            @include m.grid(2, 0);
+            grid-template-rows: none;
+        }
         .text {
             grid-row: 2;
             display: flex;
@@ -17,8 +23,16 @@
             align-items: center;
             justify-content: space-around;
             padding: 3rem 2rem;
+            @include m.desktop {
+                padding: 15rem;
+                justify-content: space-around;
+                align-items: flex-start;
+            }
             h1, p, a {
                 text-align: center;
+                @include m.desktop {
+                    text-align: left;
+                }
             }
             h1 {
                 color: v.$veryDarkDesaturated;
@@ -29,7 +43,6 @@
                 color: v.$veryDarkDesaturated;
                 position: relative;
                 z-index: 10;
-                width: 40%;
                 &::after{
                     content: '';
                     z-index: -1;
@@ -58,10 +71,26 @@
 
     .brand {
         background-image: linear-gradient(to bottom, transparent 50%, v.$white 0%), url(../img/mobile/image-transform.jpg);
+        @include m.tablet {
+            background-image: linear-gradient(to left, transparent 50%, v.$white 0%), url(../img/desktop/image-transform.jpg);
+            background-position: center right;
+            .text {
+                grid-column: 1/2;
+                grid-row: 1; 
+            }
+        }
     }
-
+    
     .audience {
         background-image: linear-gradient(to bottom, transparent 50%, v.$white 0%), url(../img/mobile/image-stand-out.jpg);
+        @include m.tablet {
+            background-image: linear-gradient(to right, transparent 50%, v.$white 0%), url(../img/desktop/image-stand-out.jpg);
+            background-position: center left;
+            .text {
+                grid-column: 2/3;
+                grid-row: 1; 
+            }
+        }
     }
 
 }

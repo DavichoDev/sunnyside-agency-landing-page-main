@@ -8,12 +8,51 @@
     background-position: center center;
     min-height: 55rem;
     position: relative;
-
+    
+    @include m.tablet {
+        background-image: url(../img/desktop/image-header.jpg);
+    }
     .header-content {
         .header-bar {
+            position: absolute;
+            z-index: 10;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 3rem 2rem;
+            width: 100%;
+            .logo-menu {
+                @include m.desktop {
+                    padding: 2rem;
+                    display: none;
+                }
+            }
+            .links {
+                display: none;
+                a {
+                    color: v.$white;
+                    padding: 1rem 2rem;
+                }
+                :last-child{
+                    color:v.$veryDarkDesaturated;
+                    font-family: v.$fuente_principal;
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                    background-color: v.$white;
+                    border: .1rem solid v.$white;
+                    border-radius: 3rem;
+                    &:hover {
+                        color:v.$white;
+                        background-color: v.$lightBlue;
+                        border: .1rem solid v.$lightBlue;
+                    }
+                }
+                @include m.desktop {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 40%;
+                }
+            }
         }
 
         .header-copy,
@@ -28,6 +67,10 @@
         .header-copy {
             top: 0;
             bottom: 30%;
+            @include m.tablet {
+                top: 0;
+                bottom: 50%;
+            }
             p {
                 color: v.$white;
                 font-family: v.$fuente_principal;
@@ -42,6 +85,10 @@
         .arrow-logo {
             bottom: 0;
             top: 30%;
+            @include m.tablet {
+                bottom: 0;
+                top: 5%;
+            }
         }
     }
 }

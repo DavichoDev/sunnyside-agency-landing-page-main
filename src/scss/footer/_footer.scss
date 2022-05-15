@@ -5,6 +5,9 @@
     background-color: v.$footerbg;
     .footer-content {
         padding: 6.4rem 0;
+        @include m.desktop {
+            padding: 4rem 0;
+        }
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -12,9 +15,18 @@
         .logo, .links, .socials {
             padding: 3rem 0;
         }
+        @include m.desktop {
+            .socials {
+                padding: 3rem 0 0 0;
+            }
+        }
         .logo {
+            cursor: pointer;
             img {
                 width: 18rem;
+                @include m.desktop {
+                    width: 14rem;
+                }
             }
         }
         .links {
@@ -22,19 +34,34 @@
             justify-content: space-around;
             width: 90%;
             padding: 3rem 0;
+            @include m.desktop {
+                justify-content: space-around;
+                width: 25%;
+            }
             a {
                 font-size: 1.8rem;
                 color: v.$darkDesaturated;
+                &:hover {
+                    color: v.$white;
+                }
             }
         }
         .socials {
             display: flex;
             justify-content: space-around;
             width: 60%;
+            @include m.desktop {
+                justify-content: space-around;
+                width: 20%;
+            }
             .social {
                 i {
                     color: v.$darkDesaturated;
                     font-size: 2.5rem;
+                    cursor: pointer;
+                    &:hover {
+                        color: v.$white;
+                    }
                 }
             }
         }

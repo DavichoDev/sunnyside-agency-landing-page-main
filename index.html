@@ -22,7 +22,7 @@
 
 <body>
 
-  <header class="header">
+  <header class="header contenedor">
     <div class="header-content">
       <div class="header-bar">
         <div class="logo">
@@ -31,6 +31,12 @@
         <div class="logo-menu">
           <img src="build/img/icon-hamburger.svg" alt="Logo HamburguerMenu">
         </div>
+        <nav class="links">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Projects</a>
+          <a href="#">Contact</a>
+        </nav>
       </div>
       <div class="header-copy">
         <p>We are creatives</p>
@@ -41,7 +47,7 @@
     </div>
   </header>
 
-  <main class="learn-more">
+  <main class="learn-more contenedor">
     <div class="about brand">
       <div class="text">
         <h1>Transform your brand</h1>
@@ -56,14 +62,15 @@
       <div class="text">
         <h1>Stand out to the right audience</h1>
         <p>
-          Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+          Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll
+          build and extend your brand in digital places.
         </p>
         <a href="#" class="pink-anchor">Learn more</a>
       </div>
     </div>
   </main>
 
-  <section class="features">
+  <section class="features contenedor">
     <div class="features-content">
       <div class="feature design">
         <!-- <picture>
@@ -74,7 +81,8 @@
         <div class="text">
           <h1>Graphic design</h1>
           <p>
-            Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+            Great design makes you memorable. We deliver artwork that underscores your brand message and captures
+            potential clients’ attention.
           </p>
         </div>
       </div>
@@ -87,22 +95,24 @@
           </picture> -->
           <h1>Photography</h1>
           <p>
-            Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+            Increase your credibility by getting the most stunning, high-quality photos that improve your business
+            image.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="testimonials">
+  <section class="testimonials contenedor">
+    <h1 class="heading">Client testimonials</h1>
     <div class="testimonials-content contenedor">
-      <h1 class="heading">Client testimonials</h1>
       <div class="testimonial">
         <div class="avatar">
           <img src="build/img/image-emily.jpg" alt="Emilys Avatar">
         </div>
         <p>
-          We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.        
+          We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
+          hit.
         </p>
         <h2>Emily R.</h2>
         <span class="position">Marketing Director</span>
@@ -112,7 +122,8 @@
           <img src="build/img/image-thomas.jpg" alt="Thomas Avatar">
         </div>
         <p>
-          Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience. 
+          Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
+          enjoyable experience.
         </p>
         <h2>Thomas S.</h2>
         <span class="position">Chief Operating Officer</span>
@@ -130,22 +141,38 @@
     </div>
   </section>
 
-  <section class="tiles">
+  <section class="tiles contenedor">
     <div class="tile">
-      <img src="build/img/mobile/image-gallery-milkbottles.jpg" alt="Tile Milkbottle">
+      <picture>
+        <source media="(max-width:480px)" srcset="build/img/mobile/image-gallery-milkbottles.jpg">
+        <source media="(min-width:480px)" srcset="build/img/desktop/image-gallery-milkbottles.jpg">
+        <img src="build/img/desktop/image-gallery-milkbottles.jpg" alt="Tile Milkbottle">
+      </picture>
     </div>
     <div class="tile">
-      <img src="build/img/mobile/image-gallery-orange.jpg" alt="Tile Orange">
+      <picture>
+        <source media="(max-width:480px)" srcset="build/img/mobile/image-gallery-orange.jpg">
+        <source media="(min-width:480px)" srcset="build/img/desktop/image-gallery-orange.jpg">
+        <img src="build/img/desktop/image-gallery-orange.jpg" alt="Tile Orange">
+      </picture>
     </div>
     <div class="tile">
-      <img src="build/img/mobile/image-gallery-cone.jpg" alt="Tile Cone">
+      <picture>
+        <source media="(max-width:480px)" srcset="build/img/mobile/image-gallery-cone.jpg">
+        <source media="(min-width:480px)" srcset="build/img/desktop/image-gallery-cone.jpg">
+        <img src="build/img/desktop/image-gallery-cone.jpg" alt="Tile Cone">
+      </picture>
     </div>
     <div class="tile">
-      <img src="build/img/mobile/image-gallery-sugar-cubes.jpg" alt="Tile Sugar Cubes">
+      <picture>
+        <source media="(max-width:480px)" srcset="build/img/mobile/image-gallery-sugar-cubes.jpg">
+        <source media="(min-width:480px)" srcset="build/img/desktop/image-gallery-sugarcubes.jpg">
+        <img src="build/img/desktop/image-gallery-sugarcubes.jpg" alt="Tile Sugar Cubes">
+      </picture>
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer contenedor">
     <div class="footer-content">
       <div class="logo">
         <img src="build/img/logo-footer.svg" alt="Logo Sunnyside">
