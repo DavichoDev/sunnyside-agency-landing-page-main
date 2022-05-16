@@ -2,7 +2,7 @@ const iconoMenu = document.getElementById('#menu-button')
 const body = document.body;
 iconoMenu.addEventListener('click', () => {
     const menuMobile = document.getElementById('#mobile-menu');
-    return menuMobile.classList.length > 1 ? close( menuMobile ) : open( menuMobile );
+    return menuMobile.classList.length > 1 ? close(menuMobile) : open(menuMobile);
 })
 
 const open = (menuMobile) => {
@@ -15,3 +15,10 @@ const close = (menuMobile) => {
     menuMobile.classList.remove('opened');
     body.style.overflow = 'visible';
 };
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) {
+        const menuMobile = document.getElementById('#mobile-menu');
+        close(menuMobile);
+    }
+})
